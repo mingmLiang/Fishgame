@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>爱心鱼</title>
+    <style type="text/css">
+        /*自定义字体*/
+        @font-face {
+            font-family: 'Gameoverfont';
+            /*format字体格式，看字体文件的后缀名为.ttf*/
+            src: url('./src/AlexBrush-Regular.ttf') format('truetype');
+
+        }
+        #container
+        {
+            margin: 0px auto;
+        }
+        body
+        {
+
+            padding-top: 10px;
+        }
+        .all_bg
+        {
+            width: 800px;
+            height: 600px;
+            margin: 0px auto;
+        }
+        #menu
+        {
+            position: absolute;
+            left: 0px;
+            top:0;
+            border-radius: 10px;
+            border: 3px solid rgba(193, 140, 226, 0.4);
+            background: rgba(193, 140, 226, 0.2);
+            text-align: center;
+            /*line-height: 300px;*/
+            margin-right: auto;
+            float: right;
+            width: 150px;
+            display: none;
+        }
+        #menu img:hover
+        {
+            transform: scale(1.2, 1.2);
+        }
+        #all_canvas
+        {
+            margin: 0px;
+
+        }
+        #canvas1
+        {
+            position: absolute;
+            /*叠加的先后关系,值越小越在后*/
+            z-index: 1;
+            border-radius: 15px;
+            border: 3px solid rgba(193, 140, 226, 0.6);
+            /*定义位置*/
+            top:0;
+            display: none;
+        }
+        #canvas2
+        {
+            position: absolute;
+            /*叠加的先后关系，值越小越在后*/
+            z-index: 0;
+            border-radius: 15px;
+            border: 3px solid rgba(193, 140, 226, 0.6);
+            /*定义位置*/
+            top:0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <!--播放音频-->
+    <audio autoplay="autoplay" loop="loop" id="musicId">
+        <source src="./src/fish.mp3"/>
+    </audio>
+    <div id="menu">
+        <img  id="music" src="./src/trumpet0.png" alt="music"\>
+       <img  src="./src/playAgin.png" id="playAgin" alt="playAgin"\>
+    </div>
+    <div class="all_bg">
+        <div id="all_canvas">
+            <canvas id="canvas1" width="800" height="600"></canvas>
+            <canvas id="canvas2" width="800" height="600"></canvas>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/commendFounction.js"></script>
+<script type="text/javascript" src="js/background.js"></script>
+<script type="text/javascript" src="js/ane.js"></script>
+<script type="text/javascript" src="js/fruit.js"></script>
+<script type="text/javascript" src="js/mom.js"></script>
+<script type="text/javascript" src="js/collision.js"></script>
+<script type="text/javascript" src="js/baby.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/wave.js"></script>
+<script type="text/javascript" src="js/halo.js"></script>
+<script type="text/javascript" src="js/dust.js"></script>
+<script type="text/javascript" src="js/musicANDplayAgin.js"></script>
+<script type="text/javascript" src="js/position.js"></script>
+</body>
+</html>
